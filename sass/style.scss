@@ -1,0 +1,122 @@
+@import "root.scss";
+@import "font.scss";
+*{
+  margin: 0;
+ 
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font-family);
+  color: var(--color-font);
+  background-color: var(--color-bg);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 65vh;
+
+  .main__text {
+    flex-basis: 41%;
+    justify-content: flex-start;
+
+    h1{
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 500;
+      letter-spacing: -0,2%;
+      margin-bottom: 24px;
+    }
+
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  .main__herobox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    gap: 3%;
+
+    .main__herobox-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: var(--color-box);
+      flex-basis: 47%;
+      flex-grow: 1;
+      border-radius: 24px;
+      margin: 5px 0;
+      padding: 24px 16px;
+      cursor: pointer;
+      transition: .5s;
+      
+      img{
+       width: 27%;
+       margin-bottom: 16px;
+      }
+
+      h2{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      p{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.425);
+      }
+      
+    }
+    .main__herobox-box:hover{
+      transform: scale(103%);
+    }
+  }
+}
+
+@media(max-width: 900px ){
+  .main--vertical{
+    flex-direction: column;
+    padding: 247px 169px;
+
+  }
+}
+
+@media(max-width: 600px){
+  .main--vertical{
+    height: 95vh;
+    width: 90vw;
+    flex-direction: column;
+    padding: 0 0;
+
+    .main__text {
+      margin-bottom: 24px;
+
+      h1 {
+        font-size: 34px;
+        line-height: 40px;
+      }
+    }
+
+    .main__herobox--mobile{
+      flex-basis: 100%;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 1%;
+    }
+
+  }
+}

@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+:root {
+  --color-bg: #0F162D;
+  --color-box: #272D42;
+  --color-font: white;
+  --font-family: "DM Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--font-family);
+  color: var(--color-font);
+  background-color: var(--color-bg);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 65vh;
+}
+.main .main__text {
+  flex-basis: 41%;
+  justify-content: flex-start;
+}
+.main .main__text h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 500;
+  letter-spacing: 0, 2%;
+  margin-bottom: 24px;
+}
+.main .main__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.main .main__herobox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  gap: 3%;
+}
+.main .main__herobox .main__herobox-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: var(--color-box);
+  flex-basis: 47%;
+  flex-grow: 1;
+  border-radius: 24px;
+  margin: 5px 0;
+  padding: 24px 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main .main__herobox .main__herobox-box img {
+  width: 27%;
+  margin-bottom: 16px;
+}
+.main .main__herobox .main__herobox-box h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.main .main__herobox .main__herobox-box p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.425);
+}
+.main .main__herobox .main__herobox-box:hover {
+  transform: scale(103%);
+}
+
+@media (max-width: 900px) {
+  .main--vertical {
+    flex-direction: column;
+    padding: 247px 169px;
+  }
+}
+@media (max-width: 600px) {
+  .main--vertical {
+    height: 95vh;
+    width: 90vw;
+    flex-direction: column;
+    padding: 0 0;
+  }
+  .main--vertical .main__text {
+    margin-bottom: 24px;
+  }
+  .main--vertical .main__text h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .main--vertical .main__herobox--mobile {
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 1%;
+  }
+}/*# sourceMappingURL=style.css.map */
